@@ -1,9 +1,7 @@
-import API from "./api";
-
-let Post = {
-    findAll(){
-        return API.fetch('posts');
+var Post = {
+    findAll: function (callback) {
+        API.fetch('posts', function (data) {
+            callback(data);
+        });
     }
 };
-
-export default Post;

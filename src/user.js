@@ -1,9 +1,7 @@
-import API from "./api";
-
-let User = {
-    findRecent(){
-        return API.fetch('activeUsers');
+var User = {
+    findRecent: function (callback) {
+        API.fetch('activeUsers', function (data) {
+            callback(data);
+        });
     }
 };
-
-export default User;

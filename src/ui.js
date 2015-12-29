@@ -1,53 +1,44 @@
-import xss from "xss-filters";
+var ui = {
+    renderPosts: function (posts) {
+        var elements = [];
+        for (var i in posts) {
+            var title = posts[i].title;
+            var lastReply = posts[i].lastReply;
+            elements.push(articleTemplate(title, lastReply));
+        }
 
-let ui = {
-    renderPosts(posts){
-        let elements = posts.map((post)=> {
-            let {title, lastReply} = post;
-            return articleTemplate(title, lastReply);
-        });
-
-        let target = document.querySelector(".container");
+        var target = document.querySelector(".container");
         target.innerHTML = elements.join("");
     },
-    renderUsers(users){
-        let elements = users.map((user)=> {
-            let {name, avatar} = user;
-            return userTemplate(name, avatar);
-        });
+    renderUsers: function (users) {
+        var elements = [];
+        for (var i in users) {
+            var name = users[i].name;
+            var avatar = users[i].avatar;
+            elements.push(userTemplate(name, avatar));
+        }
 
-        let target = document.querySelector(".sidebar-content");
+        var target = document.querySelector(".sidebar-content");
         target.innerHTML = elements.join("");
     }
 };
 
 function articleTemplate(title, lastReply) {
-    let safeTitle = xss.inHTMLData(title);
-    let safeLastReply = xss.inHTMLData(lastReply);
-
-    let template = `
-    <article class ='post'>
-        <h2 class="post-title">${safeTitle}</h2>
-        <p class="post-meta">
-            last reply on ${safeLastReply}
-        </p>
-    </article>`;
+    var template = "<article class ='post'>";
+    template += "<h2 class='post-title'>" + title + "</h2>";
+    template += "<p class='post-meta'>";
+    template += "last reply on " + lastReply + "</p>";
+    template += "</article>";
 
     return template;
 }
 
 function userTemplate(name, avatar) {
-    let safeName = xss.inHTMLData(name);
-    let safeAvatar = xss.inHTMLData(avatar);
-
-    let template = `
-    <div class ='active-avatar'>
-    <img width="54" src="assets/images/${safeAvatar}" />
-    <h5 class="post-author"> ${safeName}
-    </h5>
-    </div>`;
+    var template = "<div class ='active-avatar'>";
+    template += "<img width='54' src='http://hugify.me/52Folders/commonAssets/images/" + avatar + "' />";
+    template += "<h5 class='post-author'>" + name;
+    template += "</h5>";
+    template += "</div>";
 
     return template;
 }
-
-export default ui;
