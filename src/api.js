@@ -1,3 +1,4 @@
+//Basic call to api to send XML requests to server for CRUD values
 var API = {
     fetch: function (path, callback) {
         var uri = BASE_URI + '/' + path;

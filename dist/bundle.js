@@ -1,4 +1,7 @@
+//A separate file to define constants for use throughout the app
+
 var BASE_URI = 'http://localhost:3000';
+//Basic call to api to send XML requests to server for CRUD values
 var API = {
     fetch: function (path, callback) {
         var uri = BASE_URI + '/' + path;
@@ -18,46 +21,73 @@ var API = {
         request.send();
     }
 };
-var Post = {
-    findAll: function (callback) {
-        API.fetch('posts', function (data) {
-            callback(data);
-        });
-    }
+//The Post object class
+
+function Post() {
+    this.posts = [];
+}
+
+Post.prototype.setPosts = function (data) {
+    this.posts = data;
 };
-var User = {
-    findRecent: function (callback) {
-        API.fetch('activeUsers', function (data) {
-            callback(data);
-        });
-    }
+
+Post.prototype.getPosts = function () {
+    return this.posts;
 };
+
+Post.prototype.findAll = function (callback) {
+    var context = this;
+    API.fetch('posts', function (data) {
+        context.setPosts(data, callback(data));
+    });
+};
+function User() {
+    this.users = [];
+}
+
+User.prototype.setUsers = function (data) {
+    this.users = data;
+};
+
+User.prototype.getUsers = function () {
+    return this.users;
+};
+
+User.prototype.findRecent = function (callback) {
+    var context = this;
+    API.fetch('activeUsers', function (data) {
+        context.setUsers(data, callback(data));
+    });
+};
+var post = new Post();
+var user = new User();
+
+//Wait for page to load and then get all posts and recent users
 window.onload = function () {
-    Post.findAll(function (data) {
+    post.findAll(function (data) {
         ui.renderPosts(data);
     });
 
-    User.findRecent(function (data) {
+    user.findRecent(function (data) {
         ui.renderUsers(data);
     });
 };
-//class FlashMessage{
-//    constructor(message){
-//        this.message = message;
-//    }
-//    display(){
-//        alert(this.message);
-//    }
-//}
 var ui = {
     renderPosts: function (posts) {
+        //Set up array for templated posts
         var elements = [];
+
+        //Loop through posts, getting desired values from each posts
         for (var i in posts) {
             var title = posts[i].title;
+            var content = posts[i].content;
             var lastReply = posts[i].lastReply;
-            elements.push(articleTemplate(title, lastReply));
+
+            //Send values to template to create HTML, and add to the elements array
+            elements.push(articleTemplate(title, content, lastReply));
         }
 
+        //Find the desired location on screen and fill it with the markdown
         var target = document.querySelector(".container");
         target.innerHTML = elements.join("");
     },

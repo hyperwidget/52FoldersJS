@@ -1,12 +1,19 @@
 var ui = {
     renderPosts: function (posts) {
+        //Set up array for templated posts
         var elements = [];
+
+        //Loop through posts, getting desired values from each posts
         for (var i in posts) {
             var title = posts[i].title;
+            var content = posts[i].content;
             var lastReply = posts[i].lastReply;
-            elements.push(articleTemplate(title, lastReply));
+
+            //Send values to template to create HTML, and add to the elements array
+            elements.push(articleTemplate(title, content, lastReply));
         }
 
+        //Find the desired location on screen and fill it with the markdown
         var target = document.querySelector(".container");
         target.innerHTML = elements.join("");
     },

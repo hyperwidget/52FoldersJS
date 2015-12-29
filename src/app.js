@@ -1,9 +1,13 @@
+var post = new Post();
+var user = new User();
+
+//Wait for page to load and then get all posts and recent users
 window.onload = function () {
-    Post.findAll(function (data) {
+    post.findAll(function (data) {
         ui.renderPosts(data);
     });
 
-    User.findRecent(function (data) {
+    user.findRecent(function (data) {
         ui.renderUsers(data);
     });
 };
