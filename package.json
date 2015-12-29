@@ -1,0 +1,32 @@
+{
+  "name": "52Folders",
+  "version": "0.0.0",
+  "description": "To parent site for the 52 folders project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rawkamatic/52Folders.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rawkamatic/52Folders/issues"
+  },
+  "homepage": "https://github.com/rawkamatic/52Folders",
+  "devDependencies": {
+    "babel": "^6.3.26",
+    "babel-core": "^6.3.26",
+    "babel-preset-es2015": "^6.3.13",
+    "babelify": "^7.2.0",
+    "browserify": "^12.0.1",
+    "gulp": "^3.9.0",
+    "gulp-sass": "^2.1.1",
+    "vinyl-source-stream": "^1.1.0"
+  },
+  "dependencies": {
+    "xss-filters": "^1.2.6"
+  }
+}
