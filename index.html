@@ -4,25 +4,207 @@
     <meta charset='utf-8'>
     <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
     <meta content='width=device-width, initial-scale=1.0' name='viewport'>
-    <link href='https://fonts.googleapis.com/css?family=Amatic+SC:400,700' rel='stylesheet' type='text/css'>
     <title>52Folders</title>
+
+    <!-- Loading Bootstrap -->
+    <link href="http://hugify.me/52Folders/commonAssets/flat-ui/dist/css/vendor/bootstrap/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <!-- Loading Flat UI -->
+    <link href="http://hugify.me/52Folders/commonAssets/flat-ui/dist/css/flat-ui.min.css" rel="stylesheet">
+
+    <link rel="shortcut icon" href="http://hugify.me/52Folders/commonAssets/flat-ui/dist/img/favicon.ico">
+
+    <!-- Loading Custom Css -->
+    <link href="http://hugify.me/52Folders/commonAssets/stylesheets/application.css" rel="stylesheet"/>
+
     <link href="http://hugify.me/52Folders/commonAssets/stylesheets/application.css" rel="stylesheet" />
 </head>
 <body>
-<header>
-    <h1>Welcome to 52 Folders - JavaScript Edition!</h1>
-</header>
-<main>
-    <section class='container'>
+<div class="intro-header">
+    <header class="page-header">
+        <nav class="navbar navbar-fixed-top palette-turquoise">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                            data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <h5>
+                        <i class="fui-folder"></i> 52Folders
+                    </h5>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="#">Blog <span class="sr-only">(current)</span></a></li>
+                            <li><a href="#">About</a></li>
+                        </ul>
+                        <form class="navbar-form navbar-left" role="search">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Find a framework . . .">
+                            </div>
+                            <button type="submit" class="btn btn-default">Submit</button>
+                        </form>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+</div>
+<div class="jumbotron">
+    <div class="container">
+        <h1>Welcome to 52 Folders - JavaScript!</h1>
+    </div>
+</div>
+
+<div class="container-fluid full">
+    <section class="content row">
+        <main class="col-md-9">
+            <section class='posts-container'>
+
+        </main>
+
+        <aside class="col-md-3">
+            <div class="active">
+                <h3 class="pallete-concrete">Recent</h3>
+                <div class="sidebar-content"></div>
+            </div>
+        </aside>
     </section>
 
-    <aside class="sidebar">
-        <div class="active">
-            <h2 class="active-title">Latest Frameworks</h2>
-            <div class="sidebar-content"> </div>
+    <footer>
+        <div class="jumbotron">
+            <div class="container pt">
+                <div class="row mt">
+                    <div class="col-lg-6 col-lg-offset-3 centered">
+                        <h3>All Frameworks</h3>
+                        <hr>
+                    </div>
+                </div>
+
+                <div class="row centered">
+
+                    <div class="col-lg-2">
+                        <a class="zoom green" href="http://gentsthemes.com/demo/stanleywp/portfolio/emperors/"
+                           title="EMPERORS" style="background-image: none;">
+                            <img
+                                    src="http://hugify.me/52Folders/commonAssets/images/javascript-avatar.png"
+                                    class="attachment-post-thumbnail wp-post-image" alt="port05"
+                                    style="display: inline-block; margin-left: 0px; margin-top: 0px;">
+                            <div class="zoomOverlay"
+                                 style="opacity: 0; display: block; background-color: rgb(26, 188, 156);"></div>
+                        </a>
+
+                        <p>JAVASCRIPT</p>
+                    </div> <!-- /col -->
+
+
+                    <div class="col-lg-2">
+                        <a class="zoom green" href="http://gentsthemes.com/demo/stanleywp/portfolio/yoda/" title="YODA"
+                           style="background-image: none;">
+                            <img
+                                    src="http://hugify.me/52Folders/commonAssets/images/javascript-avatar.png"
+                                    class="attachment-post-thumbnail wp-post-image" alt="port04"
+                                    style="display: inline-block; margin-left: 0px; margin-top: 0px;">
+                            <div class="zoomOverlay"
+                                 style="opacity: 0; display: block; background-color: rgb(26, 188, 156);"></div>
+                        </a>
+
+                        <p>JAVASCRIPT</p>
+                    </div> <!-- /col -->
+
+
+                    <div class="col-lg-2">
+                        <a class="zoom green" href="http://gentsthemes.com/demo/stanleywp/portfolio/raiders/"
+                           title="RAIDERS" style="background-image: none;">
+                            <img
+                                    src="http://hugify.me/52Folders/commonAssets/images/javascript-avatar.png"
+                                    class="attachment-post-thumbnail wp-post-image" alt="port02"
+                                    style="display: inline-block; margin-left: 0px; margin-top: 0px;">
+
+                            <div class="zoomOverlay"
+                                 style="opacity: 0; display: block; background-color: rgb(26, 188, 156);"></div>
+                        </a>
+
+                        <p>JAVASCRIPT</p>
+                    </div> <!-- /col -->
+
+
+                    <div class="col-lg-2">
+                        <a class="zoom green" href="http://gentsthemes.com/demo/stanleywp/portfolio/ape/" title="APE"
+                           style="background-image: none;">
+                            <img
+                                    src="http://hugify.me/52Folders/commonAssets/images/javascript-avatar.png"
+                                    class="attachment-post-thumbnail wp-post-image" alt="port01"
+                                    style="display: inline-block; margin-left: 0px; margin-top: 0px;">
+
+                            <div class="zoomOverlay"
+                                 style="opacity: 0; display: block; background-color: rgb(26, 188, 156);"></div>
+                        </a>
+
+                        <p>JAVASCRIPT</p>
+                    </div> <!-- /col -->
+
+
+                    <div class="col-lg-2">
+                        <a class="zoom green" href="http://gentsthemes.com/demo/stanleywp/portfolio/vikings/"
+                           title="VIKINGS" style="background-image: none;">
+                            <img
+                                    src="http://hugify.me/52Folders/commonAssets/images/javascript-avatar.png"
+                                    class="attachment-post-thumbnail wp-post-image" alt="port03"
+                                    style="display: inline-block; margin-left: 0px; margin-top: 0px;">
+
+                            <div class="zoomOverlay"
+                                 style="opacity: 0; display: block; background-color: rgb(26, 188, 156);"></div>
+                        </a>
+
+                        <p>JAVASCRIPT</p>
+                    </div> <!-- /col -->
+
+
+                    <div class="col-lg-2">
+                        <a class="zoom green" href="http://gentsthemes.com/demo/stanleywp/portfolio/chiefs/"
+                           title="CHIEFS" style="background-image: none;">
+                            <img
+                                    src="http://hugify.me/52Folders/commonAssets/images/javascript-avatar.png"
+                                    class="attachment-post-thumbnail wp-post-image" alt="port06"
+                                    style="display: inline-block; margin-left: 0px; margin-top: 0px;">
+                            <div class="zoomOverlay"
+                                 style="opacity: 0; display: block; background-color: rgb(26, 188, 156);"></div>
+                        </a>
+
+                        <p>JAVASCRIPT</p>
+                    </div> <!-- /col -->
+
+
+                </div><!-- end of container -->
+
+
+            </div>
+            <!--<div class="container">-->
+            <!--<h1>All Frameworks so far!</h1>-->
+            <!--<section class='frameworks-container'>-->
+            <!--</section>-->
+            <!--</div>-->
         </div>
-    </aside>
-</main>
+    </footer>
+</div>
+
+<!-- jQuery (necessary for Flat UI's JavaScript plugins) -->
+<script src="http://hugify.me/52Folders/commonAssets/flat-ui/dist/js/vendor/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="http://hugify.me/52Folders/commonAssets/flat-ui/dist/js/vendor/video.js"></script>
+<script src="http://hugify.me/52Folders/commonAssets/flat-ui/dist/js/flat-ui.min.js"></script>
+
+<!-- Loading App Files -->
 <script src="dist/bundle.js"></script>
 </body>
 </html>

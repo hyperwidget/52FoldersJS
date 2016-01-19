@@ -16,3 +16,10 @@ User.prototype.findRecent = function (callback) {
         context.setUsers(data, callback(data));
     });
 };
+
+User.prototype.findAll = function (callback) {
+    var context = this;
+    API.fetch('users', function (data) {
+        context.setUsers(data, callback(data));
+    });
+};
