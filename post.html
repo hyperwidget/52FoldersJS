@@ -41,7 +41,7 @@
 
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                        <h4 class="folder-title">JavaScript!</h4>
+                        <h4 class="folder-title"><a href="./index.html">JavaScript!</a></h4>
                     </div>
                 </div>
             </nav>
@@ -49,7 +49,8 @@
     </div>
     <div class="jumbotron">
         <div class="container">
-            <h3>Recent Posts</h3>
+            <a class="go-back" href="javascript:history.back()">
+                <- Go back</a>
         </div>
     </div>
 
@@ -58,45 +59,31 @@
             <div class="col-md-3"></div>
 
             <main class="col-md-6">
-                <section>
-                    <h3>Add a new post</h3>
+                <section class='posts-container'></section>
 
-                    <form id="post-form" class="new-post">
-                        <div class="details-wrapper">
-                            <div>
-                                <label for="name">Name</label>
-                                <input type="text" id="name" name="name" placeholder="Your name..">
-                            </div>
-                            <div>
-                                <label for="avatar">Avatar</label>
-                                <input type="text" id="avatar" name="avatar" placeholder="Enter a url for an image">
-                            </div>
+                <h3>Add a comment</h3>
+                <form id="post-form" class="new-post">
+                    <div class="details-wrapper">
+                        <div>
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" placeholder="Your name..">
                         </div>
+                        <div>
+                            <label for="avatar">Avatar</label>
+                            <input type="text" id="avatar" name="avatar" placeholder="Enter a url for an image">
+                        </div>
+                    </div>
 
 
-                        <textarea id="content" name="content" placeholder="Share something"
-                            style="height:200px"></textarea>
+                    <textarea id="content" name="content" placeholder="Share something" style="height:200px"></textarea>
 
-                        <input type="submit" value="Submit">
-                    </form>
-                </section>
-
-                <section class='posts-container' />
+                    <input type="submit" value="Submit">
+                </form>
             </main>
-
             <div class="col-md-3"></div>
+
         </section>
 
-        <footer>
-            <div class="jumbotron">
-                <a class="archive" href="./archive.html">View Archived</a>
-                <!--<div class="container">-->
-                <!--<h1>All Frameworks so far!</h1>-->
-                <!--<section class='frameworks-container'>-->
-                <!--</section>-->
-                <!--</div>-->
-            </div>
-        </footer>
     </div>
 
     <!-- jQuery (necessary for Flat UI's JavaScript plugins) -->
