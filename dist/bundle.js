@@ -1,6 +1,8 @@
 //A separate file to define constants for use throughout the app
 
-var BASE_URI = "http://localhost:3030";
+var BASE_URI = window.location.pathname.includes("Documents")
+  ? "http://localhost:3030"
+  : "https://llnl1.herokuapp.com/";
 
 //Basic call to api to send XML requests to server for CRUD values
 var API = {
